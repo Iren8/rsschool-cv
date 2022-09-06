@@ -40,7 +40,7 @@ console.log(multiply(5, 7));
 
 # Education
 ### __Belarusian State University, School of Business and Technology Management__
-#### *Web-designer / Programmer*
+#### Web-designer / Programmer
 
 
 
