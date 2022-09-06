@@ -1,4 +1,4 @@
-# [rsschool-cv] (https://Iren8.github.io/rsschool-cv/cv)
+# [rsschool-cv](https://Iren8.github.io/rsschool-cv/cv)
 
 # Irina Shitik
 
