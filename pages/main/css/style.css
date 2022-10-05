@@ -2265,7 +2265,8 @@ a {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 33%;
             flex: 0 1 33%;
-    padding: 7.5px 17px 0;
+        padding: 11px 17px;
+    max-height: 109px;
   }
   .testimonials:before {
     width: 115px;
@@ -2285,6 +2286,11 @@ a {
     height: 75px;
     bottom: -60px;
   }
+  .testimonials__item {
+			flex: 0 1 33%;
+			padding: 11px 17px;
+			max-height: 109px;
+		}
 }
 .testimonials__slider {
   width: 599px;
