@@ -2287,10 +2287,10 @@ a {
     bottom: -60px;
   }
   .testimonials__item {
-			flex: 0 1 33%;
-			padding: 11px 17px;
-			max-height: 109px;
-		}
+	flex: 0 1 33%;
+	padding: 11px 17px;
+	max-height: 109px;
+	}
 }
 .testimonials__slider {
   width: 599px;
@@ -2459,6 +2459,13 @@ input[type=range].range_btn::-moz-range-thumb:active {
   .testimonials__button {
     margin-top: 30px;
   }
+.item-testimonials__text {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;	
+	max-height: 38px;
+	}
 }
 .footer {
   z-index: 5;
