@@ -15,13 +15,28 @@ function onInput(event) {
 		submitButton.classList.remove('submit__mistake');
 		submitButton.classList.add('submit__valid');
 	} else {
-		submitButton.classList.remove('submit__default'); //disabled-submit
+		submitButton.classList.remove('submit__default'); 
 		submitButton.classList.add('submit__mistake');
 		emailInput.classList.remove('default__email');
 		emailInput.classList.add('mistake__email');
 	}
 };
 emailInput.addEventListener('input', onInput);
+
+
+//-----------------Testimonials-slider-------------------------
+
+const scrollBtn = document.querySelector('.range_btn');
+const parentBox = document.querySelector('.testimonials__items');
+const item = document.querySelector('.testimonials__item.item-testimonials');
+const width = item.clientWidth;
+
+scrollBtn.addEventListener("input", () => {
+	let scrollValue = scrollBtn.value;
+	parentBox.style.transform = `translateX(${-scrollValue * (width + 30)}px)`;
+});
+
+
 
 
 
