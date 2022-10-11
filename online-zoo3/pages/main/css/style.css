@@ -344,7 +344,9 @@ body {
   position: relative;
   z-index: 3;
 }
-
+.form-donate__radio-amount-label.active {
+    background: url(../../../assets/icons/roller_icon.svg) center no-repeat;
+}
 .form-donate__roller {
   display: none;
   position: absolute;
