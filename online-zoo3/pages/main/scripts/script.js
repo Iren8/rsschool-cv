@@ -26,16 +26,18 @@ emailInput.addEventListener('input', onInput);
 
 //-----------------Testimonials-slider-------------------------
 
-const scrollBtn = document.querySelector('.range_btn');
-const parentBox = document.querySelector('.testimonials__items');
-const item = document.querySelector('.testimonials__item.item-testimonials');
-const width = item.clientWidth;
+function testimonialsSlider() {
+	const scrollBtn = document.querySelector('.range_btn');
+	const parentBox = document.querySelector('.testimonials__items');
+	const width = document.querySelector('.testimonials__item').clientWidth;
 
-scrollBtn.addEventListener("input", () => {
-	let scrollValue = scrollBtn.value;
-	parentBox.style.transform = `translateX(${-scrollValue * (width + 30)}px)`;
-});
-
+	scrollBtn.addEventListener("input", () => {
+		let scrollValue = scrollBtn.value;
+		let offset = -scrollValue * (width + 30);
+		parentBox.style.transform = `translateX(${offset}px)`;
+	});
+}
+testimonialsSlider();
 
 
 
