@@ -2241,6 +2241,11 @@ a {
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
   }
+  
+  #card_05,
+  #card_06 {
+    display: none;
+  }
 }
 @media (max-width: 768px) {
   .pets {
@@ -2292,7 +2297,7 @@ a {
     padding: 10px 0px;
   }
 
-  #card_04,
+  #card_05,
 #card_06 {
     display: none;
   }
