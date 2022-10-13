@@ -29,7 +29,8 @@ emailInput.addEventListener('input', onInput);
 function testimonialsSlider() {
 	const scrollBtn = document.querySelector('.range_btn');
 	const parentBox = document.querySelector('.testimonials__items');
-	const width = document.querySelector('.testimonials__item').clientWidth;
+	const item = document.querySelector('.testimonials__item');
+	const width = item.clientWidth;
 
 	scrollBtn.addEventListener("input", () => {
 		let scrollValue = scrollBtn.value;
