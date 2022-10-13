@@ -516,6 +516,12 @@ body {
   text-decoration: underline;
 }
 
+@media (max-width: 1280px) {
+  #radio-amoun1,
+#amoun1 {
+    display: none;
+  }
+}
 @media (max-width: 980px) {
   .form-donate__form-title {
     padding-left: 10px;
@@ -523,8 +529,10 @@ body {
 
   #radio-amoun1,
 #radio-amoun2,
+#radio-amoun3,
 #amoun1,
-#amoun2 {
+#amoun2,
+#amoun3 {
     display: none;
   }
 
