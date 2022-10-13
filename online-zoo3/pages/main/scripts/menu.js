@@ -33,21 +33,24 @@ if (menu && menuBurger) {
 
 //progress--line---Pick and feed a friend
 
-let radioBtn = document.querySelectorAll('.form-donate__radio-amount');
+let radioBtn = document.querySelectorAll('.form-donate__radio-amount');//dots
 let labels = document.querySelectorAll('.form-donate__radio-amount-label');
-document.querySelector('.form__input').addEventListener('input', (event) => {
+let inputField = document.querySelector('.form__input');
+
+inputField.addEventListener('input', (event) => {
 	const value = String(event.target.value);
 	if (value.length > 4) {
-		document.querySelector('.form__input').value = +value.slice(0, 4);
+		inputField.value = +value.slice(0, 4);
 	}
 	for (let i = 0; i < radioBtn.length; i++) {
-		if (+radioBtn[i].value === +value) {
+		if (+radioBtn[i].value === +inputField.value) {
 			radioBtn[i].checked = true;
 			labels.forEach(e => e.classList.remove('active'));
 			labels[i].classList.toggle('active');
 			break;
 		} else {
 			radioBtn[i].checked = false;
+			labels.forEach(e => e.classList.remove('active'));
 		}
 	}
 })
@@ -55,15 +58,12 @@ document.querySelector('.form-donate__form-slider').addEventListener('input', na
 function name() {
 	for (let i = 0; i < radioBtn.length; i++) {
 		if (radioBtn[i].checked === true) {
-			document.querySelector('.form__input').value = radioBtn[i].value;
+			inputField.value = radioBtn[i].value;
 			labels.forEach(e => e.classList.remove('active'));
 			labels[i].classList.toggle('active');
 			break;
 		} else {
-			document.querySelector('.form__input').value = '';
+			inputField.value = '';
 		}
 	}
 }
-
-
-
