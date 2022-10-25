@@ -172,13 +172,13 @@ body{
 .win__content{
 	position: relative;
 	background-color: #fff;
-	border-radius: 20px;
+	border-radius: 10px;
 	color: #367797;
-	max-width: 1000px;
+	max-width: 600px;
 	padding: 20px;
 	text-align: center;
 	line-height: 32px;
-	font-weight: 700;
+	font-weight: 400;
 	transition: all 0.8s ease 0s;
 	opacity: 0;
 	transform: translate(0px, -100%); 
@@ -186,7 +186,7 @@ body{
 .row{
 	display: flex;
 	flex-direction: row;
-	flex: 0 1 33.333%;
+	flex: 0 1 25%;
 }
 .row__item{
 	padding: 5px;
@@ -203,6 +203,15 @@ body{
 	right: 20px;
 	color: #21495c;
 	text-decoration: none;	
+}
+.duration__win, .duration__win_name{
+	min-width: 95px;
+}
+.moves__win, .moves__win_name{
+	min-width: 75px;
+}
+.data__win, .data__win_name{
+	min-width: 180px;
 }
 
 @media (max-width: 1300px) {
@@ -253,6 +262,20 @@ body{
 	}
 	.sound__after{
 		top: 0.5em;
+	}
+	.win__content{
+		max-width: 300px;
+		padding: 10px 5px 15px;
+		line-height: 20px;
+	}
+	.duration__win, .duration__win_name{
+		min-width: 75px;
+	}
+	.moves__win, .moves__win_name{
+		min-width: 55px;
+	}
+	.data__win, .data__win_name{
+		min-width: 128px;
 	}
 }
 
