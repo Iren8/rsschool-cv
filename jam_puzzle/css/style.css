@@ -1,0 +1,281 @@
+*,*:before,*:after{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+html,body{
+	height: 100%;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 20px;
+}
+body{
+	position: relative;
+}
+.content {
+	max-width: 450px;
+	padding: 15px;
+	margin: 0px auto; 
+}
+.contentHeader{
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.contentHeader a{
+	text-decoration: none;
+	color: #fff;
+}
+.button{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+	border: 1px solid #a7bfe0;
+	border-radius: 20px;
+	flex: 0 1 22%;	
+	background-color: lightblue;
+	margin: 10px 5px;
+	text-align: center;
+	transition: all 0.5s ease 0s;
+}
+.button:hover{
+	background-color: #6a9baa;
+}
+.stop{
+	background-color: gray;
+	border: 1px solid #47494a;
+}
+.sound{
+	position: relative;
+}
+.sound img{
+	width: 20px;
+	height: 20px;
+	position: relative;
+}
+.sound__after{
+	position: relative;
+	top: 0.4em;
+	left: -30px;
+	width: 2px;
+	height: 25px;
+	color: #000;
+	background-color: rgb(54, 54, 54);
+	transform: rotate(-45deg);	
+}
+.contentBody {
+	margin: 10px auto;
+	height: 450px; 
+	border: 1px solid orange;
+	border-radius: 10px;
+	padding: 10px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.item{
+	border: 1px solid gray;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 28px;
+	transition: all 0.5s ease 0s;
+	cursor: pointer;
+}
+
+.item4{
+	flex: 0 1 25%;	
+}
+.item3{
+	flex: 0 1 33.333%;	
+}
+.item5{
+	flex: 0 1 20%;	
+}
+.item6{
+	flex: 0 1 16.666%;	
+}
+.item7{
+	flex: 0 1 14.285%;	
+}
+.item8{
+	flex: 0 1 12.5%;	
+}
+.full{
+	background-color: orange;
+}
+.full:hover{
+	background-color: #f77d19;
+}
+.empty{
+	background-color: white;
+}
+.moves, .time, .sound{
+	display: flex;	
+	margin: 10px 20px;
+	justify-content: center;
+	align-items: center;
+}
+.footer{
+	margin: 20px auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.footer p{
+	margin-bottom: 10px;
+}
+.footer a{
+	transition: all 0.3s ease 0s;
+}
+.footer a:hover{	
+	color: #f77d19;
+}
+.active{	
+	color: #f77d19;
+}
+.popup, .popup__results{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+.popup__body, .win__body{
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.popup__content{
+	position: relative;
+	background-color: #fff;
+	border-radius: 20px;
+	color: #367797;
+	max-width: 300px;
+	padding: 80px 30px;
+	text-align: center;
+	line-height: 32px;
+	font-weight: 700;
+	transition: all 0.8s ease 0s;
+	opacity: 0;
+	transform: translate(0px, -100%); 
+}
+.win__content{
+	position: relative;
+	background-color: #fff;
+	border-radius: 10px;
+	color: #367797;
+	max-width: 600px;
+	padding: 20px;
+	text-align: center;
+	line-height: 32px;
+	font-weight: 400;
+	transition: all 0.8s ease 0s;
+	opacity: 0;
+	transform: translate(0px, -100%); 
+}
+.row{
+	display: flex;
+	flex-direction: row;
+	flex: 0 1 25%;
+}
+.row__item{
+	padding: 5px;
+	border: 1px solid #ccc;
+}
+.open{
+	transform: translate(0px, 0px);
+	opacity: 1;
+	visibility: visible;
+}
+.popup__close{
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	color: #21495c;
+	text-decoration: none;	
+}
+.duration__win, .duration__win_name{
+	min-width: 95px;
+}
+.moves__win, .moves__win_name{
+	min-width: 75px;
+}
+.data__win, .data__win_name{
+	min-width: 180px;
+}
+
+@media (max-width: 1300px) {
+	html,body{
+		font-size: 20px;
+	}
+	button{
+		margin: 5px;
+	}
+	.moves, .time, .sound{
+		margin: 5px 20px;
+	}
+	.sound__after{
+		top: 0.2em;
+	}
+}
+@media (max-width: 639px) {
+	html,body{
+		font-size: 16px;
+	}
+	.content {
+		max-width: 420px;
+	}
+	.contentBody {
+		height: 420px; 
+		width: 100%;		
+	}
+	.item{
+		font-size: 20px;
+	}
+}
+@media (max-width: 419px) {
+	html,body{
+		font-size: 14px;
+	}
+	.content {
+		max-width: 320px;
+	}
+	.contentBody {
+		height: 320px; 		
+	}
+	.button{
+		margin: 5px 0;	
+		flex: 0 1 100%;
+	}
+	.moves, .time, .sound{
+		margin: 10px 20px 5px;
+	}
+	.sound__after{
+		top: 0.5em;
+	}
+	.win__content{
+		max-width: 300px;
+		padding: 10px 5px 15px;
+		line-height: 20px;
+	}
+	.duration__win, .duration__win_name{
+		min-width: 75px;
+	}
+	.moves__win, .moves__win_name{
+		min-width: 55px;
+	}
+	.data__win, .data__win_name{
+		min-width: 128px;
+	}
+}
+
