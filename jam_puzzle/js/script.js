@@ -234,15 +234,65 @@ function game(matrix, moveCount, timeStart, soundSt) {
 	};
 
 	// -----------------------------------------------------
+		
+	function topTenResults() {
+		let originalObj_duration = [];
+		for (let x = 0 + 1; x < gameNmb + 1; x++) {
+			originalObj_duration.push(Number(localStorage.getItem('winDuration_' + String(x))));
+		}
+		let changedObj_duration = originalObj_duration.concat();
+		changedObj_duration.sort((a, b) => { return a - b; });
+
+		let markResultsObject = {};
+		for (let p = 0; p < originalObj_duration.length; p++) {
+			let mark = changedObj_duration.indexOf(originalObj_duration[p]) + 1;
+			markResultsObject[mark] = String(p + 1);
+		}
+		return markResultsObject
+	};
+
+	// -----------------------------------------------------
+
+	const top_ten_results_object = topTenResults();
+	let position = 0;
+
+	const dataWinName = document.createElement('div');
+	const movesWinName = document.createElement('div');
+	const durationWinName = document.createElement('div');
+	const positionWinName = document.createElement('div');
+
+
+	winContent.append(rowName);
+	rowName.classList.add('row');
+
+	rowName.prepend(dataWinName);
+	dataWinName.classList.add('row__item', 'data__win_name');
+	dataWinName.innerHTML = 'Date & Time';
+
+	rowName.prepend(movesWinName);
+	movesWinName.classList.add('row__item', 'moves__win_name');
+	movesWinName.innerHTML = 'Moves';
+
+	rowName.prepend(durationWinName);
+	durationWinName.classList.add('row__item', 'duration__win_name');
+	durationWinName.innerHTML = 'Duration';
+
+	rowName.prepend(positionWinName);
+	positionWinName.classList.add('row__item', 'position__win_name');
+	positionWinName.innerHTML = '#';
+
+
 	for (let i = gameIndex + 1; i < gameNmb + 1; i++) {
-		let dateTimeName = 'winDateTime_' + String(i);
-		let moveName = 'winMoves_' + String(i);
-		let gameDurationName = 'winDuration_' + String(i);
+		let dateTimeName = 'winDateTime_' + top_ten_results_object[String(i)];
+		let moveName = 'winMoves_' + top_ten_results_object[String(i)];
+		let gameDurationName = 'winDuration_' + top_ten_results_object[String(i)];
+		position = position + 1;
 
 		const row = document.createElement('div');
 		const dataWin = document.createElement('div');
 		const movesWin = document.createElement('div');
 		const durationWin = document.createElement('div');
+		const positionWin = document.createElement('div');
 
 		winContent.append(row);
 		row.classList.add('row');
@@ -258,6 +308,10 @@ function game(matrix, moveCount, timeStart, soundSt) {
 		row.prepend(durationWin);
 		durationWin.classList.add('row__item', 'duration__win');
 		durationWin.innerHTML = setFormatedTimeToResultsList(Number(localStorage.getItem(gameDurationName)));
+
+		row.prepend(positionWin);
+		positionWin.classList.add('row__item', 'position__win');
+		positionWin.innerHTML = String(position);
 	}
 
 	winX.addEventListener('click', function (event) {
