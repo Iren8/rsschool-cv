@@ -611,10 +611,10 @@ function game(matrix, moveCount, timeStart, soundSt) {
 
 						let date = now.toString().split(' ')
 						let dateResult = '';
-						for (let dateItem = 0; dateItem < 4; dateItem++) {
+						for (let dateItem = 1; dateItem < 4; dateItem++) {
 							dateResult = dateResult + date[dateItem] + ' '
 						}
-						dateResult = dateResult + date[4]
+						dateResult = dateResult + date[4].slice(0, date[4].length - 3);
 
 						popupText.innerHTML = `Hooray!<br> You solved the puzzle in ${setFormatedTimeToResultsList(timeStart)} and ${moveCount} moves!`;
 						let winMooves = 'winMoves_' + String(gameNmb + 1);
