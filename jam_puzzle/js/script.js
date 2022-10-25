@@ -211,6 +211,7 @@ function game(matrix, moveCount, timeStart, soundSt) {
 	const winContent = document.createElement('div');
 	const winX = document.createElement('div');
 	const winTitle = document.createElement('div');
+	const rowName = document.createElement('div');
 
 	popup.after(popupResults);
 	popupResults.classList.add('popup__results');
