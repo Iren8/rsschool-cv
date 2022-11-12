@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../main/css/style.css">
+  <link rel="stylesheet" href="css/style_quiz.css">
+
+  <title>Quiz</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container container">
+        <div class="header__row">
+          <a href="../main/index.html" class="header__logo logo">
+            <img src="../../assets/images/winglogo.png" alt="SongBird" class="logo-header">
+          </a>
+          <h4>Score: <span class="score">0</span></h4>
+        </div>
+        <nav class="quiz__menu menu">
+          <ul class="menu__list_quiz">
+            <li class="menu__item_quiz"><a href="#" class="menu__link_quiz">Разминка</a></li>
+            <li class="menu__item_quiz"><a href="#" class="menu__link_quiz">Воробьиные</a></li>
+            <li class="menu__item_quiz"><a href="#" class="menu__link_quiz">Лесные птицы</a></li>
+            <li class="menu__item_quiz"><a href="#" class="menu__link_quiz">Певчие птицы</a></li>
+            <li class="menu__item_quiz"><a href="#" class="menu__link_quiz">Хищные птицы</a></li>
+            <li class="menu__item_quiz"><a href="#" class="menu__link_quiz">Морские птицы</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main" id="main">
+      <section class="quiz-content">
+        <div class="quiz-content__container container">
+          <div class="quiz-content__player">
+            <div class="quiz-content__image">
+              <img class="quiz-content__img" src="../../assets/images/bird.jpg" alt="bird">
+            </div>
+            <div class="quiz-content__audio">
+              <ul class="quiz-content__list">
+                <li class="quiz-content__item">
+                  <h3 class="quiz-content__item-title">*****</h3>
+                </li>
+                <li class="quiz-content__item">
+                  <div class="quiz-content__track">
+                    <audio class="audio-player__1"
+                      src="https://www.xeno-canto.org/sounds/uploaded/VOLIQOYWKG/XC489247-190724_09.10h_huiszwaluw_biesbosch_amaliahoeve_roep_100%2Bex_fouragerend_gezien_%20%282%29.mp3"
+                      hidden=""></audio>
+                    <div class="controls">
+                      <div class="play-button">
+                        <img class="play-button_img" src="../../assets/images/play-button1.png" alt="play_button">
+                      </div>
+                      <div class="timebar">
+                        <div class="timebar-track">
+                        </div>
+                        <div class="timebar-circle">
+                        </div>
+                        <div class="timebar-info">
+                          <div>00:01</div>
+                          <div>01:35</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="quiz-content__info">
+            <audio class="audio__click"></audio>
+            <div class="info-column">
+              <ul class="info-column__list">
+                <li class="info-column__item"><span class="li-circle"></span>Ворон</li>
+                <li class="info-column__item"><span class="li-circle"></span>Журавль</li>
+                <li class="info-column__item"><span class="li-circle"></span>Ласточка</li>
+                <li class="info-column__item"><span class="li-circle"></span>Козодой</li>
+                <li class="info-column__item"><span class="li-circle"></span>Кукушка</li>
+                <li class="info-column__item"><span class="li-circle"></span>Синица</li>
+              </ul>
+            </div>
+            <div class="info-column">
+              <div class="info-column__card">
+                <p class="instruction" id="instruction">
+                  <span>Прослушайте аудиозапись и выберите птицу из списка.</span>
+                </p>
+                <div class="card-wrapper" id="card-wrapper">
+                  <div class="card-body">
+                    <img class="card-body_img" src="https://live.staticflickr.com//65535//49298804222_474cfe8682.jpg"
+                      alt="Ворон">
+                    <ul class="card-body__list">
+                      <li class="card-body__item">
+                        <h4 class="card-body__item-title">Ворон</h4>
+                      </li>
+                      <li class=" card-body__item">
+                        <span class="card-body__item-species">Corvus corax</span>
+                      </li>
+                      <li class="card-body__item">
+                        <div class="card-body__player">
+                          <audio
+                            src="https://www.xeno-canto.org/sounds/uploaded/XIQVMQVUPP/XC518684-Grands%20corbeaux%2009012020%20Suzon.mp3"
+                            hidden="">
+                          </audio>
+                          <div class="controls">
+                            <div class="play-button">
+                              <img class="play-button_img" src="../../assets/images/play-button1.png" alt="play_button">
+                            </div>
+                            <div class="timebar">
+                              <div class="timebar-track">
+                              </div>
+                              <div class="timebar-circle">
+                              </div>
+                              <div class="timebar-info">
+                                <div>00:00</div>
+                                <div>00:12</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-body__description">Звуки, издаваемые журавлем, похожи на звонкое «кур-лы – кур-лы».
+                    Журавли чаще всего поют дуэтом – одна птица начинает запев со слога «кур», а вторая подхватывает
+                    «лы».
+                    Если птица поёт одна, то она издает только звук «кур».</div>
+                </div>
+              </div>
+            </div>
+            <button class="button button__next-level">Следующий уровень</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <section class=" result" id="result">
+      <div class="result__container container">
+        <div class="result__block">
+          <div class="result__msg">
+            <h2 class="result__title">Поздравляем!</h2>
+            <p class="result__text">
+              Вы прошли викторину и набрали <span class="score">0</span> из 30 возможных баллов!
+            </p>
+          </div>
+          <button class="button result__button">Попробовать еще раз</button>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>

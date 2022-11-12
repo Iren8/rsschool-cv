@@ -4,12 +4,60 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
   <title>Song Bird</title>
 </head>
 
 <body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container container">
+        <div class="header__row">
+          <a href="#" class="header__logo logo">
+            <img src="../../assets/images/winglogo.png" alt="SongBird" class="logo-header">
+          </a>
+          <nav class="header__menu menu">
+            <div class="menu__body">
+              <ul class="menu__list">
+                <li class="menu__item menu__link_active">About</li>
+                <li class="menu__item"><a href="../quiz/index.html" class="menu__link">Quiz</a></li>
+                <li class="menu__item"><a href="#" class="sound"><img src="../../assets/images/sound.png" alt="Sound"
+                      id="unmuteButton"></a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="main-screen">
+        <video autoplay muted loop id="video">
+          <source src="../../assets/video/bird_1280.mp4" type="video/mp4">
+        </video>
 
+      </section>
+      <div class="main-screen__body">
+        <div class="main-screen__container container">
+          <h1>Listen to your favorite bird</h1>
+          <div class="main-screen__button"><a href="../quiz/index.html">Start the quiz</a></div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__wrapper">
+          <div class="footer-row__copy" id="">
+            <a href="https://github.com/Iren8/rsschool-cv/tree/song-bird">GitHub © 2022</a>
+          </div>
+          <a href="https://rs.school/js" class="logo-rss"><img src="../../assets/images/rs_school_js.svg"
+              alt="RSSchool"></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="scripts/script.js"></script>
 </body>
 
 </html>
