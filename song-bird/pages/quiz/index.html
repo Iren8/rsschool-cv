@@ -34,7 +34,7 @@
         </nav>
       </div>
     </header>
-    <main class="main" id="main">
+    <main class="quiz" id="main">
       <section class="quiz-content">
         <div class="quiz-content__container container">
           <div class="quiz-content__player">
@@ -48,21 +48,19 @@
                 </li>
                 <li class="quiz-content__item">
                   <div class="quiz-content__track">
-                    <audio class="audio-player__1"
-                      src="https://www.xeno-canto.org/sounds/uploaded/VOLIQOYWKG/XC489247-190724_09.10h_huiszwaluw_biesbosch_amaliahoeve_roep_100%2Bex_fouragerend_gezien_%20%282%29.mp3"
-                      hidden=""></audio>
+                    <audio class="audio-player_first" id="audio-player_first" src="" hidden=""></audio>
                     <div class="controls">
                       <div class="play-button">
-                        <img class="play-button_img" src="../../assets/images/play-button1.png" alt="play_button">
+                        <img class="play-button_img play-button__img-first" src="../../assets/images/play-button1.png"
+                          alt="play_button">
                       </div>
                       <div class="timebar">
-                        <div class="timebar-track">
-                        </div>
-                        <div class="timebar-circle">
-                        </div>
+                        <div class="timebar-track_color"></div>
+                        <div class="timebar-track_white"></div>
+                        <div class="timebar-circle"></div>
                         <div class="timebar-info">
-                          <div>00:01</div>
-                          <div>01:35</div>
+                          <div class="timebar-info__current-first">00:00</div>
+                          <div class="timebar-info__end-first">00:00</div>
                         </div>
                       </div>
                     </div>
@@ -75,23 +73,27 @@
             <audio class="audio__click"></audio>
             <div class="info-column">
               <ul class="info-column__list">
-                <li class="info-column__item"><span class="li-circle"></span>Ворон</li>
-                <li class="info-column__item"><span class="li-circle"></span>Журавль</li>
-                <li class="info-column__item"><span class="li-circle"></span>Ласточка</li>
-                <li class="info-column__item"><span class="li-circle"></span>Козодой</li>
-                <li class="info-column__item"><span class="li-circle"></span>Кукушка</li>
-                <li class="info-column__item"><span class="li-circle"></span>Синица</li>
+                <li class="info-column__item"><span class="li-circle"></span><a class="info-column__link">Ворон</a></li>
+                <li class="info-column__item"><span class="li-circle"></span><a class="info-column__link">Журавль</a>
+                </li>
+                <li class="info-column__item"><span class="li-circle"></span><a class="info-column__link">Ласточка</a>
+                </li>
+                <li class="info-column__item"><span class="li-circle"></span><a class="info-column__link">Козодой</a>
+                </li>
+                <li class="info-column__item"><span class="li-circle"></span><a class="info-column__link">Кукушка</a>
+                </li>
+                <li class="info-column__item"><span class="li-circle"></span><a class="info-column__link">Синица</a>
+                </li>
               </ul>
             </div>
             <div class="info-column">
               <div class="info-column__card">
                 <p class="instruction" id="instruction">
-                  <span>Прослушайте аудиозапись и выберите птицу из списка.</span>
+                  <span>Прослушайте аудиозапись и выберите птицу из списка</span>
                 </p>
                 <div class="card-wrapper" id="card-wrapper">
                   <div class="card-body">
-                    <img class="card-body_img" src="https://live.staticflickr.com//65535//49298804222_474cfe8682.jpg"
-                      alt="Ворон">
+                    <img class="card-body_img" src="" alt="Ворон">
                     <ul class="card-body__list">
                       <li class="card-body__item">
                         <h4 class="card-body__item-title">Ворон</h4>
@@ -101,22 +103,21 @@
                       </li>
                       <li class="card-body__item">
                         <div class="card-body__player">
-                          <audio
-                            src="https://www.xeno-canto.org/sounds/uploaded/XIQVMQVUPP/XC518684-Grands%20corbeaux%2009012020%20Suzon.mp3"
-                            hidden="">
+                          <audio class="audio-player_second" id="audio-player_second" src="" hidden="">
                           </audio>
                           <div class="controls">
                             <div class="play-button">
-                              <img class="play-button_img" src="../../assets/images/play-button1.png" alt="play_button">
+                              <img class="play-button_img play-button__img-second"
+                                src="../../assets/images/play-button1.png" alt="play_button">
                             </div>
-                            <div class="timebar">
-                              <div class="timebar-track">
-                              </div>
-                              <div class="timebar-circle">
+                            <div class="timebar_second">
+                              <div class="timebar-track__color-second"></div>
+                              <div class="timebar-track__white-second"></div>
+                              <div class="timebar-circle_second">
                               </div>
                               <div class="timebar-info">
-                                <div>00:00</div>
-                                <div>00:12</div>
+                                <div class="timebar-info__current-second">00:00</div>
+                                <div class="timebar-info__end-second">00:00</div>
                               </div>
                             </div>
                           </div>
@@ -131,7 +132,9 @@
                 </div>
               </div>
             </div>
-            <button class="button button__next-level">Следующий уровень</button>
+            <button class="button__next-level button" disabled>
+              <a class="next-level__link">Следующий уровень</a>
+            </button>
           </div>
         </div>
       </section>
@@ -142,10 +145,12 @@
           <div class="result__msg">
             <h2 class="result__title">Поздравляем!</h2>
             <p class="result__text">
-              Вы прошли викторину и набрали <span class="score">0</span> из 30 возможных баллов!
+              Вы прошли викторину и набрали <span class="final__score">0</span> из 30 возможных баллов!
             </p>
           </div>
-          <button class="button result__button">Попробовать еще раз</button>
+          <div class="result__button button">
+            <a class="result__link">Попробовать еще раз</a>
+          </div>
         </div>
       </div>
     </section>
