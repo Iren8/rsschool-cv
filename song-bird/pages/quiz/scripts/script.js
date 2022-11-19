@@ -507,8 +507,8 @@ function showBirdInfo(bird_id) {
   audio_player_second.setAttribute('src', selectedBird.local_audio);
 };
 
-audio_path_wrong = "C:/Users/User/Desktop/rsschool-cv/song-bird/assets/audio/wrong.wav";
-audio_path_right = "C:/Users/User/Desktop/rsschool-cv/song-bird/assets/audio/right.wav";
+audio_path_wrong = "../../assets/audio/wrong.wav";
+audio_path_right = "../../assets/audio/right.wav";
 function playAudio() {
   audio__click.play();
 };
