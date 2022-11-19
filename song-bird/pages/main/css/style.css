@@ -380,10 +380,6 @@ body {
   -webkit-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
 }
-.info-column__item:hover, .info-column__item:active {
-  background-color: #6eac09;
-  border-color: #85b438;
-}
 .info-column__card {
   position: relative;
   display: -webkit-box;
