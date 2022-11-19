@@ -27,7 +27,7 @@ Also I have an experience as a web-designer.
 # Skills and Proficiency 
 * HTML5 / CSS3
 * SASS / SCSS (basic)
-* JavaScript, jQuery (basic)
+* JavaScript (basic)
 * Git / GitHub 
 * VS Code
 * Adobe Photoshop, Figma
