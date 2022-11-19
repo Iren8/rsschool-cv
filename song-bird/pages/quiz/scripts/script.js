@@ -1,3 +1,4 @@
+
 const birdsData = [
   [
     {
@@ -431,7 +432,7 @@ final__score.innerText = score;
 
 function playQuiz() {
   let currentGroupIndex = bird_group_list.indexOf(bird_group);
-  let randomLength = birdsData[currentGroupIndex].length
+  let randomLength = birdsData[currentGroupIndex].length;
   let randomInt = Math.floor(Math.random() * randomLength);
   let bird = birdsData[currentGroupIndex][randomInt];
   audio_player_first.setAttribute('src', bird.local_audio);
@@ -563,10 +564,10 @@ function setDefaultColor() {
 }
 
 function nextLevelPlayerProp() {
-  timebar_circle.style.cssText = 'left : 0px; background-color: #b4b2b2';
-  timebar_circle_second.style.cssText = 'left : 0px; background-color: #b4b2b2';
-  timebar_track_color.style.cssText = 'width : 0px';
-  timebar_track__color_second.style.cssText = 'width : 0px';
+  timebar_circle.style.cssText = 'left: 0px; background-color: #b4b2b2';
+  timebar_circle_second.style.cssText = 'left: 0px; background-color: #b4b2b2';
+  timebar_track_color.style.cssText = 'width: 0px';
+  timebar_track__color_second.style.cssText = 'width: 0px';
   timebar_info__current_first.innerText = "00:00";
   timebar_info__current_second.innerText = "00:00";
   timebar_info__end_first.innerText = "00:00";
@@ -650,8 +651,8 @@ function updateProgress_1(e) {
   if (play_button__img_first.getAttribute('alt') == 'pause_button') {
     const { duration, currentTime } = e.srcElement;
     const progressPrecent = (currentTime / duration) * 100;
-    timebar_circle.style.cssText = 'left : ' + String(timebar.offsetWidth / 100 * progressPrecent) + 'px; background-color: #6eac09';
-    timebar_track_color.style.cssText = 'width : ' + String((timebar_track_color.style.left + timebar.offsetWidth) / 100 * progressPrecent) + 'px';
+    timebar_circle.style.cssText = 'left: ' + String(timebar.offsetWidth / 100 * progressPrecent) + 'px; background-color: #6eac09';
+    timebar_track_color.style.cssText = 'width: ' + String((timebar_track_color.style.left + timebar.offsetWidth) / 100 * progressPrecent) + 'px';
     timebar_info__end_first.innerText = formatTime(duration).minutes + ':' + formatTime(duration).seconds;
     timebar_info__current_first.innerText = formatTime(currentTime).minutes + ':' + formatTime(currentTime).seconds;
   }
@@ -661,8 +662,8 @@ function updateProgress_2(e) {
   if (play_button__img_second.getAttribute('alt') == 'pause_button') {
     const { duration, currentTime } = e.srcElement;
     const progressPrecent = (currentTime / duration) * 100;
-    timebar_circle_second.style.cssText = 'left : ' + String(timebar_second.offsetWidth / 100 * progressPrecent) + 'px; background-color: #6eac09';
-    timebar_track__color_second.style.cssText = 'width : ' + String((timebar_track__color_second.style.left + timebar_second.offsetWidth) / 100 * progressPrecent) + 'px';
+    timebar_circle_second.style.cssText = 'left: ' + String(timebar_second.offsetWidth / 100 * progressPrecent) + 'px; background-color: #6eac09';
+    timebar_track__color_second.style.cssText = 'width: ' + String((timebar_track__color_second.style.left + timebar_second.offsetWidth) / 100 * progressPrecent) + 'px';
     timebar_info__end_second.innerText = formatTime(duration).minutes + ':' + formatTime(duration).seconds;
     timebar_info__current_second.innerText = formatTime(currentTime).minutes + ':' + formatTime(currentTime).seconds;
   }
@@ -691,15 +692,15 @@ timebar.addEventListener('click', setProgress);
 timebar_second.addEventListener('click', setProgress_2);
 
 function endStop_1() {
-  timebar_circle.style.cssText = 'left : 0px; background-color: #b4b2b2';
-  timebar_track_color.style.cssText = 'width : 0px';
+  timebar_circle.style.cssText = 'left: 0px; background-color: #b4b2b2';
+  timebar_track_color.style.cssText = 'width: 0px';
   timebar_info__current_first.innerText = "00:00";
   togglePlayer_1(path_pause);
 };
 
 function endStop_2() {
-  timebar_circle_second.style.cssText = 'left : 0px; background-color: #b4b2b2';
-  timebar_track__color_second.style.cssText = 'width : 0px';
+  timebar_circle_second.style.cssText = 'left: 0px; background-color: #b4b2b2';
+  timebar_track__color_second.style.cssText = 'width: 0px';
   timebar_info__current_second.innerText = "00:00";
   togglePlayer_2(path_pause);
 };
